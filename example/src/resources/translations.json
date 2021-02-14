@@ -1,0 +1,17 @@
+{
+  "greeting": {
+    "en": "Welcome, {name}!",
+    "ru": "Добро пожаловать, {name}! {t2} {t3} {t4}",
+    "ro": "Bine ati venit, {name}!"
+  },
+  "hello": {
+    "en": "Hello!",
+    "ru": "Привет!",
+    "ro": "Salut!"
+  },
+  "selectLanguage": {
+    "en": "Choose language:",
+    "ru": "Выберите язык:",
+    "ro": "Alege limba:"
+  }
+}

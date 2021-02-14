@@ -10,7 +10,8 @@
   },
   "scripts": {
     "serve:start": "microbundle-crl watch --no-compress --format modern,cjs",
-    "serve:build": "microbundle-crl --no-compress --format modern,cjs"
+    "serve:build": "microbundle-crl --no-compress --format modern,cjs",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "peerDependencies": {
     "react": "^16.0.0"
@@ -19,7 +20,6 @@
     "@types/react": "^16.9.27",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
-    "microbundle-crl": "^0.13.10",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
@@ -33,11 +33,14 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
     "gh-pages": "^2.2.0",
+    "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "3.4.4",
+    "lodash": "^4.17.20",
+    "@types/lodash": "^4.14.168"
   },
   "files": [
     "dist"
@@ -82,7 +85,8 @@
       "react/jsx-handler-names": 0,
       "react/jsx-fragments": 0,
       "react/no-unused-prop-types": 0,
-      "import/export": 0
+      "import/export": 0,
+      "no-unused-vars": "off"
     }
   },
   "eslintIgnore": [
