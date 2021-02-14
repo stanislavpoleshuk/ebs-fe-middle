@@ -13,7 +13,7 @@ export const translateFunc = memoize(
 
 const TranslateProvider: React.FC<IProps> = ({ children, locale, translate }) => {
   const [translationReader, setTranslationReader] = useState<IReader>();
-  const [currentLocale, setCurrentLanguage] = useState(locale);
+  const [currentLocale, setCurrentLocale] = useState(locale);
 
   const initLocalize = useCallback((locale: Locale, translate: Translate) => {
     if (translateFunc.cache.clear) {
@@ -28,8 +28,14 @@ const TranslateProvider: React.FC<IProps> = ({ children, locale, translate }) =>
   }, []);
 
   const handleChangeLocale = useCallback((nextLocale: Locale) => {
-    setCurrentLanguage(nextLocale);
+    setCurrentLocale(nextLocale);
   }, []);
+
+  useEffect(() => {
+    if (locale !== currentLocale) {
+      setCurrentLocale(locale);
+    }
+  }, [locale]);
 
   useEffect(() => {
     if (translate !== undefined) {

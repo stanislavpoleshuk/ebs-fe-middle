@@ -5,12 +5,10 @@ import { IntlProvider } from 'ebs-intl';
 import AppComponent from './AppComponent';
 
 const App = () => {
-  const [defaultLocale] = useState('ru');
+  const [defaultLocale] = useState('en');
   return (
     <IntlProvider translate={translate} locale={defaultLocale}>
-      <AppComponent>
-        <div>asdasd</div>
-      </AppComponent>
+      <AppComponent />
     </IntlProvider>
   );
 };
